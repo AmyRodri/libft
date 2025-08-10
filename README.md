@@ -98,7 +98,7 @@ gcc main.c libft.a -I ./srcs/includes
 
 ## 📚 Funções Implementadas na Libft – Descrição e Exemplos
 
-#### Parte 1.
+#### 🔗 Parte 1.
 | Função       | Parâmetros | Retorno | Descrição curta | Exemplo de uso |
 |--------------|-----------|---------|-----------------|----------------|
 | `ft_atoi`    | `const char *str` | `int` | Converte string numérica em inteiro | `ft_atoi("42") // 42` |
@@ -125,7 +125,7 @@ gcc main.c libft.a -I ./srcs/includes
 | `ft_tolower` | `int c` | `int` | Converte caractere para minúsculo | `ft_tolower('A') // 'a'` |
 | `ft_toupper` | `int c` | `int` | Converte caractere para maiúsculo | `ft_toupper('a') // 'A'` |
 
-#### Parte 2.
+#### 🔗 Parte 2.
 | Função | Parâmetros | Retorno | Descrição curta | Exemplo de uso |
 |--------|-----------|---------|-----------------|----------------|
 | `ft_itoa` | `int n` | `char *` | Converte inteiro em string (aloca nova) | `ft_itoa(42); // "42"` |
@@ -154,6 +154,17 @@ gcc main.c libft.a -I ./srcs/includes
 | `ft_lstclear` | `t_list **lst`, `void (*del)(void *)` | `void` | Remove e libera todos os nós | `ft_lstclear(&lst, free);` |
 | `ft_lstiter` | `t_list *lst`, `void (*f)(void *)` | `void` | Aplica função `f` em cada conteúdo da lista | `ft_lstiter(lst, print);` |
 | `ft_lstmap` | `t_list *lst`, `void *(*f)(void *)`, `void (*del)(void *)` | `t_list *` | Cria nova lista aplicando `f` a cada conteúdo | `ft_lstmap(lst, dup, free);` |
+
+##### 📌 Observações:
+
+Todas essas funções usam a estrutura t_list definida no cabeçalho da libft, geralmente assim:
+```c
+typedef struct s_list {
+    void            *content;
+    struct s_list   *next;
+} t_list;
+```
+Os exemplos são apenas ilustrativos e assumem que lst já foi criada corretamente.
 
 ---
 
