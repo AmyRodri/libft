@@ -66,8 +66,8 @@ OBJS := ${SRCS:.c=.o}
 %.o: %.c
 	${CC} ${CCFLAGS} ${INCLUDE} -c $< -o $@
 
-${NAME}: ${OBJS}
-	${AR} ${NAME} ${OBJS}
+${NAME}: ${OBJS} ${OBJS_BONUS}
+	${AR} ${NAME} ${OBJS} ${OBJS_BONUS}
 
 all: ${NAME}
 
