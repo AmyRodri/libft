@@ -45,9 +45,8 @@ PRINTF = srcs/printf/ft_printf.c				\
 		srcs/printf/ft_printf_utils.c			\
 
 GNL = srcs/gnl/get_next_line.c					\
-	srcs/gnl/get_next_line_utils.c				\
 
-SRCS = ${PART1} ${PART2} $(PRINTF)
+SRCS = ${PART1} ${PART2} $(PRINTF) $(GNL)
 
 BONUS_SRC = srcs/bonus/ft_lstnew_bonus.c 		\
 			srcs/bonus/ft_lstadd_front_bonus.c 	\

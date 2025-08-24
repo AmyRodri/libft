@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amyrodri <amyrodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 11:17:07 by amyrodri          #+#    #+#             */
-/*   Updated: 2025/08/05 11:01:29 by amyrodri         ###   ########.fr       */
+/*   Updated: 2025/08/24 12:00:48 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 int	new_line(const char *s)
 {
@@ -79,7 +79,7 @@ char	*read_line(char *line, int fd)
 		tmp = ft_strjoin(line, buffer);
 		free(line);
 		if (!tmp)
-			return (free_null(buffer, line));
+			return (free_null(buffer, tmp));
 		line = tmp;
 	}
 	free(buffer);
