@@ -41,7 +41,10 @@ PART2 = srcs/part2/ft_substr.c 					\
 		srcs/part2/ft_putendl_fd.c				\
 		srcs/part2/ft_putnbr_fd.c 				\
 
-SRCS = ${PART1} ${PART2}
+PRINTF = srcs/printf/ft_printf.c				\
+		srcs/printf/ft_printf_utils.c			\
+
+SRCS = ${PART1} ${PART2} $(PRINTF)
 
 BONUS_SRC = srcs/bonus/ft_lstnew_bonus.c 		\
 			srcs/bonus/ft_lstadd_front_bonus.c 	\
